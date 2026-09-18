@@ -2,8 +2,15 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Print Shop Break-Even</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Print ROI">
+<meta name="theme-color" content="#0F8B8D">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAYAAAA9zQYyAAADaklEQVR42u3dMW4TQQCG0fXIktsUiJQ0FFhC4gS5CgUVdcgxQupUKbhKToCEtE0aShBFWipTAUKOnbVZOzv/vNcGDfHsx2jYySiz1Wr1qoMQ867rupPLq36sAe8vzpfGM95TjVf8myaJoBE0CBoEDYJG0CBoEDQIGgSNoEHQIGgQNAgaQYOgYQJm7hSSxJ1C40WNZ8uBPTQIGgQNe/ynkHWL65tBf+70+qZfjPj37jLez/fvPCgrNIIGQYOgQdAgaAQNggZBg6BB0AgaBA3H4E7hBqcvX/dT/x6/3X1ZelL/cqdwg0UFD2/I53CnEOyhQdBwmD0067Zdb/r8/MPRvo833z96GFZoBM3kVk2rs6BjohazoEHQU1xFrc6CBkGP4cXb1XLK4wmaJ9si2GoIGgQ9xVXa6izomKjFLGgQ9BRXaauzoGOiFvP43Ck8kK+fZo9eK/LO+UBBu1N4mPG2/dz0ptXZ/NlygKCfci9t7yzomKjFLGgQ9BRXaauzoOP30wgaBI2gQdAgaBA0CBpBg6BB0CBoEDSp3Ckkit9TaLyo8WJ/adD9xfmPDV+63fK1fVQ73snl1TN76LpjJnyeiockakGDoEHQIGgEHSPxVZT5anyFFnW78zRv7WE5icsWF/SA96pOCoNX6tJYzITPW/FQSJo/r+2IImgEDYIGQQ/nMMX8dV3mncJbee7sLOWDuFNovK7ruj7l88acFO7wHtVJYfC2ozQWM+HzWDwEkubTazuiCBpBg6BB0I9zQmg+41ZoUZvH3+atPQwnhdmqD3qP96ZOCoNX6tJYzITPazHpJM2v13ZEETSCBkGDoDdzmGJ+H5Jwp9AdwvFVe8fQnULjPaSv9fNWe1L4H+9JnRQGbztKYzETPs/FJJM0317bEUXQCBoEDYJe54TQfMet0KI2z5vMW5tsJ4XZqgt6hPeiTgqDV+rSWMyEz3sxqSTNv9d2RBE0ggZBg6D/cphi/oeo8U6hO4THV80dQ3cKjTdEX8vnreakcMT3oE4Kg7cdpbGYCX8ONQRtz+x5ZK3QIGgEDYIGQe/kzGPyPKJWaMfensNQ89Ym00mhLQcIGgQNggZBI2gQNAga9pXwewrhD3cKjRc1ni0H9tAgaBA0CBpBg6BB0CBoEDSCBkGDoEHQIGgEDYIGQcO4fgGgTrkMHOmPlAAAAABJRU5ErkJggg==">
+<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAYAAAA9zQYyAAADaklEQVR42u3dMW4TQQCG0fXIktsUiJQ0FFhC4gS5CgUVdcgxQupUKbhKToCEtE0aShBFWipTAUKOnbVZOzv/vNcGDfHsx2jYySiz1Wr1qoMQ867rupPLq36sAe8vzpfGM95TjVf8myaJoBE0CBoEDYJG0CBoEDQIGgSNoEHQIGgQNAgaQYOgYQJm7hSSxJ1C40WNZ8uBPTQIGgQNe/ynkHWL65tBf+70+qZfjPj37jLez/fvPCgrNIIGQYOgQdAgaAQNggZBg6BB0AgaBA3H4E7hBqcvX/dT/x6/3X1ZelL/cqdwg0UFD2/I53CnEOyhQdBwmD0067Zdb/r8/MPRvo833z96GFZoBM3kVk2rs6BjohazoEHQU1xFrc6CBkGP4cXb1XLK4wmaJ9si2GoIGgQ9xVXa6izomKjFLGgQ9BRXaauzoGOiFvP43Ck8kK+fZo9eK/LO+UBBu1N4mPG2/dz0ptXZ/NlygKCfci9t7yzomKjFLGgQ9BRXaauzoOP30wgaBI2gQdAgaBA0CBpBg6BB0CBoEDSp3Ckkit9TaLyo8WJ/adD9xfmPDV+63fK1fVQ73snl1TN76LpjJnyeiockakGDoEHQIGgEHSPxVZT5anyFFnW78zRv7WE5icsWF/SA96pOCoNX6tJYzITPW/FQSJo/r+2IImgEDYIGQQ/nMMX8dV3mncJbee7sLOWDuFNovK7ruj7l88acFO7wHtVJYfC2ozQWM+HzWDwEkubTazuiCBpBg6BB0I9zQmg+41ZoUZvH3+atPQwnhdmqD3qP96ZOCoNX6tJYzITPazHpJM2v13ZEETSCBkGDoDdzmGJ+H5Jwp9AdwvFVe8fQnULjPaSv9fNWe1L4H+9JnRQGbztKYzETPs/FJJM0317bEUXQCBoEDYJe54TQfMet0KI2z5vMW5tsJ4XZqgt6hPeiTgqDV+rSWMyEz3sxqSTNv9d2RBE0ggZBg6D/cphi/oeo8U6hO4THV80dQ3cKjTdEX8vnreakcMT3oE4Kg7cdpbGYCX8ONQRtz+x5ZK3QIGgEDYIGQe/kzGPyPKJWaMfensNQ89Ym00mhLQcIGgQNggZBI2gQNAga9pXwewrhD3cKjRc1ni0H9tAgaBA0CBpBg6BB0CBoEDSCBkGDoEHQIGgEDYIGQcO4fgGgTrkMHOmPlAAAAABJRU5ErkJggg==">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Rubik:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -464,6 +471,26 @@ button.mark.ok:hover{border-color:var(--profit); color:var(--profit)} button.mar
 .notes-btn.sm{padding:.15rem .5rem; font-size:.72rem}
 .btn.danger:hover{filter:brightness(1.1)}
 input[type=time]{min-height:40px}
+/* ---- phone (installed to home screen) ---- */
+.setup{padding-top:calc(.75rem + env(safe-area-inset-top))}
+.wrap{padding-left:max(1rem, env(safe-area-inset-left)); padding-right:max(1rem, env(safe-area-inset-right)); padding-bottom:calc(4rem + env(safe-area-inset-bottom))}
+@media (max-width:640px){
+  input,select,textarea{font-size:16px}          /* stops Safari zooming into fields */
+  .btn,.steps button,.seg button{min-height:44px}
+  h1{font-size:1.35rem}
+  .setup-bar .title small{display:none}
+  .invest b{font-size:1.25rem}
+  .hdr-stats button{padding:.2rem .55rem; font-size:.72rem} .hdr-stats button b{font-size:.82rem}
+  .setup-bar{gap:.6rem}
+  .steps{margin-top:.25rem}
+  .banner{position:sticky; bottom:calc(.5rem + env(safe-area-inset-bottom)); z-index:10}
+  .item-del{top:-8px; left:-8px; width:30px; height:30px}
+  .stats .stat b{font-size:1.05rem}
+  .qty-row,.qty-head,.batch-total{grid-template-columns:minmax(0,1fr) 58px 58px 78px; gap:.35rem}
+  .agenda{grid-template-columns:1fr}
+  .modal-box{max-height:calc(100vh - 2rem - env(safe-area-inset-bottom)); overflow:auto}
+}
+@media (display-mode: standalone){ body{overscroll-behavior-y:none} }
 @media (prefers-reduced-motion: reduce){ *{transition:none !important} }
 </style>
 </head>
@@ -1880,8 +1907,11 @@ input[type=time]{min-height:40px}
   try{ const v=localStorage.getItem(KEY+':view'); if(['setup','items','sim','sched'].includes(v)) initialView=v; }catch(e){}
   setView(initialView,false);
 
+  // phone keyboards: numeric fields get the decimal keypad
+  new MutationObserver(()=>{ document.querySelectorAll('input[type=number]:not([inputmode])').forEach(i=>i.setAttribute('inputmode', (i.step&&i.step!=='1')||i.classList.contains('amt')?'decimal':'numeric')); }).observe(document.body,{childList:true,subtree:true});
   state=load();
   renderAll();
+  document.querySelectorAll('input[type=number]:not([inputmode])').forEach(i=>i.setAttribute('inputmode',(i.step&&i.step!=='1')?'decimal':'numeric'));
 })();
 </script>
 </body>
